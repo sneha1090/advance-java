@@ -1,5 +1,6 @@
 
 import java.util.ArrayList;
+import java.util.List; 
 
 public class mapping {
     public static void main(String[] args)
@@ -10,7 +11,7 @@ public class mapping {
         list.add(60);
         list.add(70);
        
-        list.stream().filter(n-> n%2==0).map(x-> x*2)
-        .forEach(System.out::print);
+         List<Integer>list2=list.stream().filter(n-> n%2==0).map(n-> n*2).toList();
+          System.out.print("update list: "+ list2);
     }
 }
